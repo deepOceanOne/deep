@@ -9,12 +9,12 @@ insertDocuments = function(db,content, callback) {
   // describ, title, detail
 
   collection.insertMany([
-    {describ : content.describ}, {title : content.title}, {detail : content.detail}
+    {describ : content.describ, title : content.title, detail : content.detail}
   ], function(err, result) {
     assert.equal(err, null);
-    assert.equal(3, result.result.n);
-    assert.equal(3, result.ops.length);
-    console.log("Inserted 3 documents into the document collection");
+    assert.equal(1, result.result.n);
+    assert.equal(1, result.ops.length);
+    console.log("Inserted 1 documents into the document collection");
     callback(result);
   });
 }
