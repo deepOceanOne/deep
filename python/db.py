@@ -14,7 +14,8 @@ sys.setdefaultencoding( "utf-8" )
 
 
 def analyze_single_page(pageUrl):
-	html = requests.get(pageUrl,timeout=20,verify=False).text
+	print 'pageUrl handling .... ' + pageUrl
+	html = requests.get(pageUrl,timeout=90,verify=False).text
 	soup = BeautifulSoup(html)
 	hostname = "https://www.npmjs.com"
 	details = ''
@@ -32,10 +33,12 @@ def analyze_single_page(pageUrl):
 	codecs.open('total_project_list.txt', mode='ab', encoding='utf-8').writelines([ item+'\n' for item in total_describ_set])
 	
 def analysis_single_page_detail(pageUrl):
-	html = requests.get(pageUrl,timeout=20,verify=False).text
+	html = requests.get(pageUrl,timeout=90,verify=False).text
 	soup = BeautifulSoup(html)
 	detail = ''
 	div_readme_list = soup.find_all('div',{"id":"readme","class":"markdown"})
+	if(len(div_readme_list)<1):
+		return detail
 	div_readme = div_readme_list[0]
 	for item in div_readme.find_all("p"):
 		detail += item.text
@@ -44,4 +47,7 @@ def analysis_single_page_detail(pageUrl):
 
 
 if __name__ == "__main__":
-	analyze_single_page("http://www.npmjs.com/search?q=z")
+	for i in range(98,199):
+		analyze_single_page("http://www.npmjs.com/search?q=z"+"&page="+str(i))
+
+
