@@ -1,0 +1,705 @@
+
+<!DOCTYPE html>
+<!--[if IE 6]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 7]><html class="ie lt-ie8"><![endif]-->
+<!--[if IE 8]><html class="ie ie8"><![endif]-->
+<!--[if IE 9]><html class="ie ie9"><![endif]-->
+<!--[if !IE]><!--> <html> <!--<![endif]-->
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1255494d3a","applicationID":"15702971","transactionName":"e1daR0JWVV9RER9fWlVdG1peXVxL","queueTime":27,"applicationTime":6,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(u(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(2),u=t(3),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var s=["setPageViewName","setCustomAttribute","finished","addToTrace","inlineHit"],p="api-",l=p+"ixn-";a(s,function(t,e){f[e]=o(p+e,!0,"api")}),f.addPageAction=o(p+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var d=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){d[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],2:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],3:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?u(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),u=a.length,c=0;c<u;c++)a[c].apply(i,r);var s=f[m[n]];return s&&s.push([w,n,r,i]),i}function p(t,e){g[t]=l(t).concat(e)}function l(t){return g[t]||[]}function d(t){return s[t]=s[t]||o(n)}function v(t,e){c(t,function(t,n){e=e||"feature",m[n]=e,e in f||(f[e]=[])})}var g={},m={},w={on:p,emit:n,get:d,listeners:l,context:e,buffer:v};return w}function i(){return new r}var a="nr@context",u=t("gos"),c=t(2),f={},s={},p=e.exports=o();p.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!h++){var t=y.info=NREUM.info,e=s.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(m,function(e,n){t[e]||(t[e]=n)});var n="https"===g.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",u("mark",["onload",a()],null,"api");var r=s.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===s.readyState&&i()}function i(){u("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var u=t("handle"),c=t(2),f=window,s=f.document,p="addEventListener",l="attachEvent",d=f.XMLHttpRequest,v=d&&d.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:d,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(1);var g=""+location,m={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-971.min.js"},w=d&&v&&v[p]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:g,features:{},xhrWrappable:w};s[p]?(s[p]("DOMContentLoaded",i,!1),f[p]("load",r,!1)):(s[l]("onreadystatechange",o),f[l]("onload",r)),u("mark",["firstbyte",a()],null,"api");var h=0},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta property="wb:webmaster" content="294ec9de89e7fadb" />
+  <meta property="qc:admins" content="104102651453316562112116375" />
+  <meta property="qc:admins" content="11635613706305617" />
+  <meta property="qc:admins" content="1163561616621163056375" />
+  <meta name="google-site-verification" content="cV4-qkUJZR6gmFeajx_UyPe47GW9vY6cnCrYtCHYNh4" />
+  <meta name="google-site-verification" content="HF7lfF8YEGs1qtCE-kPml8Z469e2RHhGajy6JPVy5XI" />
+  <meta http-equiv="mobile-agent" content="format=html5; url=http://www.jianshu.com/">
+  
+  <title>首页 - 简书</title>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="qtwSFlYRfbjBbxjR0V4Hntdw6PGkwm6wxzlCsYxztcQeGYndt78cnzQHk5cePdLfm0/pvWheszKdPE4wejNClQ==" />
+  <!--[if lte IE 8]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="stylesheet" media="all" href="http://cdn-qn0.jianshu.io/assets/base-28859e35d389885d08837bc971ff742c.css" />
+
+    <link rel="stylesheet" media="all" href="http://cdn-qn0.jianshu.io/assets/reading-bc4422e046bfdc9835cfcddb0c2de55d.css" />
+  <link rel="stylesheet" media="all" href="http://cdn-qn0.jianshu.io/assets/base-read-mode-64acccf6966299cfa3d580140a2582fe.css" />
+  <script src="http://cdn-qn0.jianshu.io/assets/modernizr-613ea63b5aa2f0e2a1946e9c28c8eedb.js"></script>
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if IE 8]><link rel="stylesheet" media="all" href="http://cdn-qn0.jianshu.io/assets/scaffolding/for_ie-7f1c477ffedc13c11315103e8787dc6c.css" /><![endif]-->
+  <!--[if lt IE 9]><link rel="stylesheet" media="all" href="http://cdn-qn0.jianshu.io/assets/scaffolding/for_ie-7f1c477ffedc13c11315103e8787dc6c.css" /><![endif]-->
+  <link href="http://baijii-common.b0.upaiyun.com/icons/favicon.ico" rel="icon">
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/57-b426758a1fcfb30486f20fd073c3b8ec.png" sizes="57x57" />
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/72-feca4b183b9d29fd188665785dc7a7f1.png" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/76-ba757f1ad3421192ce7192170393d2b0.png" sizes="76x76" />
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/114-8dae53b3bcea3f06bb139e329d1edab3.png" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/120-fa315ee0177dba4c55d4f66d4129b47f.png" sizes="120x120" />
+      <link rel="apple-touch-icon-precomposed" href="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/152-052f5799bec8fb3aa624bdc72ef5bd1d.png" sizes="152x152" />
+
+
+  <!-- Growing.io -->
+    <script type='text/javascript'>
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function(){
+      _vds.push(['setAccountId', '81aa392bc97abf45']);
+      (function() {
+        var vds = document.createElement('script');
+        vds.type='text/javascript';
+        vds.async = true;
+        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(vds, s);
+      })();
+    })();
+  </script>
+
+</head>
+
+  <body class="output fluid zh cn win reader-day-mode reader-font2" data-js-module="recommendation" data-locale="zh-CN">
+    
+    <div class="navbar navbar-jianshu shrink">
+  <div class="dropdown">
+    <a class="dropdown-toggle logo" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="javascript:void(0)">
+      简
+    </a>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+      <li><a href="/"><i class="fa fa-home"></i> 首页</a></li>
+      <li><a href="/collections"><i class="fa fa-th"></i> 专题</a></li>
+      <li><a href="/user_invitations"><i class="fa fa-money"></i> 发钱啦</a></li>
+    </ul>
+  </div>
+</div>
+<div class="navbar-user">
+    <a class="login" data-signup-link="true" data-toggle="modal" href="/sign_up">
+      <i class="fa fa-user"></i> 注册
+</a>    <a class="login" data-signin-link="true" data-toggle="modal" href="/sign_in">
+      <i class="fa fa-sign-in"></i> 登录
+</a>    <a class="daytime set-view-mode pull-right" href="javascript:void(0)"><i class="fa fa-moon-o"></i></a>
+</div>
+<div class="navbar navbar-jianshu expanded">
+  <div class="dropdown">
+      <a class="active logo" role="button" data-original-title="个人主页" data-container="div.expanded" href="/">
+        <b>简</b><i class="fa fa-home"></i><span class="title">首页</span>
+</a>      <a data-toggle="tooltip" data-placement="right" data-original-title="专题" data-container="div.expanded" href="/collections">
+        <i class="fa fa-th"></i><span class="title">专题</span>
+</a>    <a class="ad-selector" href="/apps">
+      <i class="fa fa-mobile"></i><span class="title">下载手机应用</span>
+</a>    <div class="ad-container ">
+      <div class="ad-pop">
+        <img class="ad-logo" src="http://cdn-qn0.jianshu.io/assets/apple-touch-icons/114-8dae53b3bcea3f06bb139e329d1edab3.png" alt="114" />
+        <p class="ad-title">简书</p>
+        <p class="ad-subtitle">交流故事，沟通想法</p>
+        <img class="ad-qrcode" src="http://cdn-qn0.jianshu.io/assets/app-page/download-app-qrcode-053849fa25f9b44573ef8dd3c118a20f.png" alt="Download app qrcode" />
+        <div>
+          <a class="ad-link" href="https://itunes.apple.com/cn/app/jian-shu/id888237539?ls=1&amp;mt=8">iOS</a>·
+          <a class="ad-link" href="http://downloads.jianshu.io/apps/haruki/JianShu-1.11.1.apk">Android</a>
+        </div>
+      </div> 
+    </div>
+  </div>
+  <div class="nav-user">
+      <a href='#view-mode-modal' data-toggle='modal'><i class="fa fa-font"></i><span class="title">显示模式</span></a>
+
+      <a class="signin" data-signin-link="true" data-toggle="modal" data-placement="right" data-original-title="登录" data-container="div.expanded" href="/sign_in">
+        <i class="fa fa-sign-in"></i><span class="title">登录</span>
+</a>    </div>
+  </div>
+
+    
+    <div class="row-fluid">
+      
+  <div class="recommended">
+    <!-- aside -->
+      <div class="span3 left-aside">
+    <div class="cover-img" style="background-image: url(http://upload.jianshu.io/daily_images/images/c7VXwMJV7YyqtyqXFHKX.jpg)"></div>
+    <div class="bottom-block">
+      
+      <h1>简书</h1>
+      <h3>交流故事，沟通想法</h3>
+      <p>一个基于内容分享的社区</p>
+      <a class="btn btn btn-large btn-success" id="write-button" data-signin-link="true" data-toggle="modal" href="/sign_in">提笔写篇文章</a>
+
+    </div>
+      <div class="img-info">
+        <i class="fa fa-info"></i>
+        <div class="info">
+           Photo by <a target="_blank" href="http://splitshire.com/">splitshire</a>
+        </div>
+      </div>
+  </div>
+
+    <div class="span7 offset3">
+      <div class="page-title">
+        <ul class="recommened-nav navigation clearfix" data-container='#list-container' data-loader='.loader-tiny'
+           data-user-slug=>
+            <!-- 未登录状态 -->
+            <!-- Active: recommended notes list -->
+            <li class="active">
+              <a data-pjax="true" href="/trending/now">发现</a>
+            </li>
+            <li class="bonus">
+              <a href="/zodiac/2015"><i class="fa fa-bars"></i> 2015精选</a>
+            </li>
+          <img class="hide loader-tiny" src="http://baijii-common.b0.upaiyun.com/loaders/tiny.gif" alt="Tiny" />
+          <li class="search">
+            <form class="search-form" target="_blank" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+  <input type="search" name="q" id="q" placeholder="搜索" class="input-medium search-query" />
+  <span class="search_trigger" onclick="$('form.search-form').submit();"><i class="fa fa-search"></i></span>
+</form>
+          </li>
+        </ul>
+      </div>
+      <div id="list-container">
+        
+
+  <ul class="unstyled clearfix sort-nav" id="collection-categories-nav" data-js-module="collection-category" data-fetch-url="/recommendations/notes">
+      <li class=active><a class="category" data-dimension="now" href="javascript:void(null);">热门</a></li>
+      <li ><a class="category" data-category-id="56" href="javascript:void(null);">新上榜</a></li>
+      <li ><a class="category" data-category-id="60" href="javascript:void(null);">日报</a></li>
+      <li ><a class="category" data-dimension="weekly" href="javascript:void(null);">七日热门</a></li>
+      <li ><a class="category" data-dimension="monthly" href="javascript:void(null);">三十日热门</a></li>
+      <li ><a class="category" data-category-id="61" href="javascript:void(null);">有奖活动</a></li>
+      <li ><a class="category" data-category-id="62" href="javascript:void(null);">简书出版</a></li>
+      <li ><a class="category" data-category-id="63" href="javascript:void(null);">简书播客</a></li>
+    <li><img class="hide loader-tiny" src="http://baijii-common.b0.upaiyun.com/loaders/tiny.gif" alt="Tiny" /></li>
+  </ul>
+
+
+<ul class="article-list thumbnails">
+  
+  <li class=have-img>
+      <a class="wrap-img" href="/p/62b5e12cd88d"><img src="http://upload-images.jianshu.io/upload_images/2278772-9c9559b18fedfb5e.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/8455abc710c6">千乾浅倩</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T19:22:05+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/62b5e12cd88d">孩子名字大众化？《宋词》让你独一无二（女孩篇）</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/62b5e12cd88d">
+          阅读 3961
+</a>        <a target="_blank" href="/p/62b5e12cd88d#comments">
+           · 评论 91
+</a>        <span> · 喜欢 315</span>
+          <span> · 打赏 1</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/4b3606fae060"><img src="http://upload-images.jianshu.io/upload_images/1537594-721361a03e183669.JPG?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/bfe4c3547845">十三夜</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T12:58:48+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/4b3606fae060">20岁以后，你要学会富养自己</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/4b3606fae060">
+          阅读 17174
+</a>        <a target="_blank" href="/p/4b3606fae060#comments">
+           · 评论 416
+</a>        <span> · 喜欢 986</span>
+          <span> · 打赏 13</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/e969b0410a0d"><img src="http://upload-images.jianshu.io/upload_images/1968032-b5f7c4fbc705ae48?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/19778091f02e">安可安</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-14T22:53:09+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/e969b0410a0d">王宝强事件，我要给这几位中国特色段子手颁奖，坐好！</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/e969b0410a0d">
+          阅读 14437
+</a>        <a target="_blank" href="/p/e969b0410a0d#comments">
+           · 评论 130
+</a>        <span> · 喜欢 210</span>
+          <span> · 打赏 3</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/55ec182fa650"><img src="http://upload-images.jianshu.io/upload_images/1760729-8e608fb183998eda.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/0e1e2a31fc3a">子诺不离</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T20:38:44+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/55ec182fa650">如何培养自律的习惯</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/55ec182fa650">
+          阅读 1370
+</a>        <a target="_blank" href="/p/55ec182fa650#comments">
+           · 评论 8
+</a>        <span> · 喜欢 81</span>
+          <span> · 打赏 1</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/cbe5c5d17e58"><img src="http://upload-images.jianshu.io/upload_images/2357771-e3e8243b746280bf?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/111760257d80">翟瑞婷</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T18:43:05+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/cbe5c5d17e58">想好好活着，你必须学会还击</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/cbe5c5d17e58">
+          阅读 2371
+</a>        <a target="_blank" href="/p/cbe5c5d17e58#comments">
+           · 评论 49
+</a>        <span> · 喜欢 125</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/da3ab6899b4a"><img src="http://upload-images.jianshu.io/upload_images/1818922-e08764da80e729f9.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/9c3e81d30deb">森林维度</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T06:13:44+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/da3ab6899b4a">看了这些技巧和工具，轻松运营公众号</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/da3ab6899b4a">
+          阅读 740
+</a>        <a target="_blank" href="/p/da3ab6899b4a#comments">
+           · 评论 19
+</a>        <span> · 喜欢 80</span>
+          <span> · 打赏 1</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/52777495d0b1"><img src="http://upload-images.jianshu.io/upload_images/2163444-a8e6381e139a4a3f.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/510c04a343dd">微风不老</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T15:58:22+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/52777495d0b1">为什么越来越多人在工作几年后又选择继续深造？</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/52777495d0b1">
+          阅读 3240
+</a>        <a target="_blank" href="/p/52777495d0b1#comments">
+           · 评论 44
+</a>        <span> · 喜欢 110</span>
+          <span> · 打赏 5</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/81455b8d3b6b"><img src="http://upload-images.jianshu.io/upload_images/2613036-37ac56012d56fe57.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/a3bed4c50c17">M文</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T17:31:39+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/81455b8d3b6b">我曾经是一个很容易生气的人</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/81455b8d3b6b">
+          阅读 1415
+</a>        <a target="_blank" href="/p/81455b8d3b6b#comments">
+           · 评论 18
+</a>        <span> · 喜欢 55</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/338ef4fe7289"><img src="http://upload-images.jianshu.io/upload_images/2460327-13e7c3bdd13dd082.JPG?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/983143f95609">周皮皮bibby</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T17:04:51+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/338ef4fe7289">亲爱的，选择遗忘那不是爱情</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/338ef4fe7289">
+          阅读 792
+</a>        <a target="_blank" href="/p/338ef4fe7289#comments">
+           · 评论 41
+</a>        <span> · 喜欢 38</span>
+          <span> · 打赏 2</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/65dd73bac6d9"><img src="http://upload-images.jianshu.io/upload_images/1750186-1430c803bb3ec4d5.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/59b6069c573a">辞悲郁</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T20:44:29+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/65dd73bac6d9">一个妓女给的家</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/65dd73bac6d9">
+          阅读 676
+</a>        <a target="_blank" href="/p/65dd73bac6d9#comments">
+           · 评论 14
+</a>        <span> · 喜欢 38</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/3fa93675e5c3"><img src="http://upload-images.jianshu.io/upload_images/1657714-1a7ef9df944f0d3c?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/9beed2b8b1db">咸鱼队长</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T13:45:33+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/3fa93675e5c3">20个造成你肥胖的习惯，看到第一个就震惊了！</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/3fa93675e5c3">
+          阅读 9252
+</a>        <a target="_blank" href="/p/3fa93675e5c3#comments">
+           · 评论 18
+</a>        <span> · 喜欢 176</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li >
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/cd73ae789321">简书活动精选</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-15T12:17:18+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/f0b244304799">Heresay ｜可能永远不会有人懂你，然后呢？</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/f0b244304799">
+          阅读 4929
+</a>        <a target="_blank" href="/p/f0b244304799#comments">
+           · 评论 130
+</a>        <span> · 喜欢 70</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/43649dffb64e"><img src="http://upload-images.jianshu.io/upload_images/2526743-0da0c6de20bdefe3.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/89eb650cc9ab">八段锦</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T15:02:19+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/43649dffb64e">孔令辉已老，马苏依然俏 | 新奥运时代的女人们，有没有男人都很美</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/43649dffb64e">
+          阅读 2875
+</a>        <a target="_blank" href="/p/43649dffb64e#comments">
+           · 评论 23
+</a>        <span> · 喜欢 70</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li >
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/d3a337db3168">罂粟姐姐</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T10:46:05+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/7b55bad719cf">给90后职场人的10条建议，真没有那么多“宫心计”</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/7b55bad719cf">
+          阅读 685
+</a>        <a target="_blank" href="/p/7b55bad719cf#comments">
+           · 评论 10
+</a>        <span> · 喜欢 46</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/2d91c74b4acf"><img src="http://upload-images.jianshu.io/upload_images/251595-2811e730907fb41c.jpeg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/cd3f5e3185f3">四郎</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T19:12:42+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/2d91c74b4acf">大学最难熬的4门必修课，每次想到眼角都有泪滑过</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/2d91c74b4acf">
+          阅读 1341
+</a>        <a target="_blank" href="/p/2d91c74b4acf#comments">
+           · 评论 18
+</a>        <span> · 喜欢 21</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/6995a0c6f97d"><img src="http://upload-images.jianshu.io/upload_images/1880318-197a8ceddfadd025?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/147e7fa8a962">我家瑜伽</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T16:14:57+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/6995a0c6f97d">据说，练瑜伽的人都是这样看书的?！ </a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/6995a0c6f97d">
+          阅读 1193
+</a>        <a target="_blank" href="/p/6995a0c6f97d#comments">
+           · 评论 7
+</a>        <span> · 喜欢 38</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/8b1ee903598f"><img src="http://upload-images.jianshu.io/upload_images/568470-6f861f346a5c9763.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/d9edcb44e2f2">简书日报</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-16T18:03:36+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/8b1ee903598f">简书晚报160816——《中国的鬼节为什么不热闹》</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/8b1ee903598f">
+          阅读 7249
+</a>        <a target="_blank" href="/p/8b1ee903598f#comments">
+           · 评论 7
+</a>        <span> · 喜欢 62</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/2572474cef3d"><img src="http://upload-images.jianshu.io/upload_images/2396509-8f149c68bdb93ae2.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/0b52f48e2ae7">蘑菇王</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-15T21:54:42+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/2572474cef3d">泡面情结--总有你喜欢的一款泡面</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/2572474cef3d">
+          阅读 745
+</a>        <a target="_blank" href="/p/2572474cef3d#comments">
+           · 评论 20
+</a>        <span> · 喜欢 27</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/4981880e50d0"><img src="http://upload-images.jianshu.io/upload_images/2649104-9530acdcdee73614.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/cd73ae789321">简书活动精选</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-15T10:40:54+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/4981880e50d0">爱屁屁|简书新版发布，App Store评分拿现金红包</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/4981880e50d0">
+          阅读 4147
+</a>        <a target="_blank" href="/p/4981880e50d0#comments">
+           · 评论 50
+</a>        <span> · 喜欢 24</span>
+        
+      </div>
+    </div>
+  </li>
+
+  <li class=have-img>
+      <a class="wrap-img" href="/p/fad1bb68c577"><img src="http://upload-images.jianshu.io/upload_images/1835526-f4269e398f88e301.jpg?imageMogr2/auto-orient/strip%7CimageView2/1/w/300/h/300" alt="300" /></a>
+    <div>
+      <p class="list-top">
+        <a class="author-name blue-link" target="_blank" href="/users/55b597320c4e">简书出版</a>
+        <em>·</em>
+        <span class="time" data-shared-at="2016-08-15T14:05:49+08:00"></span>
+      </p>
+      <h4 class="title"><a target="_blank" href="/p/fad1bb68c577">《简书历史月刊001：在历史的世界游弋》上线</a></h4>
+      <div class="list-footer">
+        <a target="_blank" href="/p/fad1bb68c577">
+          阅读 1033
+</a>        <a target="_blank" href="/p/fad1bb68c577#comments">
+           · 评论 1
+</a>        <span> · 喜欢 18</span>
+          <span> · 打赏 1</span>
+        
+      </div>
+    </div>
+  </li>
+
+</ul>
+
+  <div class="load-more"><button class="ladda-button "
+  data-style="slide-left"
+  data-type="script"
+  data-remote
+  data-size="medium"
+  data-url="/top/daily?note_ids%5B%5D=5303732&note_ids%5B%5D=5298022&note_ids%5B%5D=5273484&note_ids%5B%5D=5240339&note_ids%5B%5D=5303922&note_ids%5B%5D=5293204&note_ids%5B%5D=5300967&note_ids%5B%5D=5299127&note_ids%5B%5D=5296519&note_ids%5B%5D=5305264&note_ids%5B%5D=5298466&note_ids%5B%5D=5279425&note_ids%5B%5D=5299300&note_ids%5B%5D=5285958&note_ids%5B%5D=5304110&note_ids%5B%5D=5279489&note_ids%5B%5D=5303034&note_ids%5B%5D=5287350&note_ids%5B%5D=5278300&note_ids%5B%5D=5193031&page=2"
+  data-color="maleskine"
+  data-method="get">
+  <span class="ladda-label">点击查看更多</span>
+</button></div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="time-machine-modal"
+       class="modal hide fade share-weixin-modal time-machine-modal"
+       tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-stats2015-url="http://www.jianshu.com/stats2015">
+
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    </div>
+  </div>
+
+    </div>
+    <footer>
+  <div class="footer-l">
+    <p>
+      <a href="http://www.jianshu.com/collection/jppzD2" target="_blank">关于简书</a> |
+      <a target="_blank" href="/contact">联系我们</a> |
+      <a href="http://www.jianshu.com/collection/fc488cd78374" target="_blank">作者成书计划</a> |
+      <a href="http://www.jianshu.com/notebooks/547/latest" target="_blank">帮助中心</a> |
+      <a href="http://jianshucom.taobao.com/" target="_blank">简书周边</a> |
+      <a href="http://www.jianshu.com/p/cabc8fa39830">合作伙伴</a> |
+    </p>
+    <p>©2012-2016 <a href="/" target="_blank">简书</a> / 沪ICP备11018329号-5 /<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010602000064"><img style="width: 18px; height: 18px" src="http://cdn-qn0.jianshu.io/assets/beianbgs-8077429238867bbe0d8c66a2a3c298af.png" alt="Beianbgs" /> 沪公网安备31010602000064号</a> <a key ="549264633b05a3da0fbd5c99" logo_size="83x30" logo_type="realname" href="http://www.anquan.org"><script src="http://static.anquan.org/static/outer/js/aq_auth.js"></script></a></p>
+  </div>
+
+  <div class="footer-r pull-right">
+    <div class="app-download-btn">
+      <a href="/apps">
+        <img src="http://cdn-qn0.jianshu.io/assets/app-page/ios-bf05821ad054ccfb594fcc43a92a3753.png" alt="Ios" />
+</a>      <a href="/apps">
+        <img src="http://cdn-qn0.jianshu.io/assets/app-page/android-63f9ad04e8805deae8d8e93ee45c5a2d.png" alt="Android" />
+</a>    </div>
+    <div>
+      关注我们:
+      <a href="http://weibo.com/jianshuio" target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+      <a class="weixin" href="#share-weixin-modal" data-toggle="modal">
+        <i class="fa fa-weixin"></i>
+      </a>
+      <a href="https://twitter.com/jianshucom" target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <br><a href="http://windows.microsoft.com/zh-CN/internet-explorer/download-ie" class="upgrade-ie">本网站不支持 IE6/IE7，如果您希望继续使用 IE 浏览器，请升级至IE8及以上版本</a>
+    </div>
+  </div>
+
+  <!--modal-->
+  <div class="modal hide fade share-weixin-modal" id="share-weixin-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      </div>
+      <div class="modal-content">
+        <div class="modal-body">
+          <p>关注我们的微信公众号，获得每日好文推荐。微信中搜索「简书」或者扫一扫下方二维码：</p>
+          <img src="http://baijii-common.b0.upaiyun.com/logos/jianshu_wechat_qrcode.jpg" alt="Jianshu wechat qrcode" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+</footer>
+
+    <div id="flash" class="hide"></div>
+    
+  <div id="view-mode-modal" tabindex="-1" class="modal hide read-modal" aria-hidden="false" data-js-module='view-mode-modal'>
+    <div class="btn-group change-background" data-toggle="buttons-radio">
+      <a class="btn btn-daytime active" data-mode="day" href="javascript:void(null);">
+        <i class="fa fa-sun-o"></i>
+</a>      <a class="btn btn-nighttime " data-mode="night" href="javascript:void(null);">
+        <i class="fa fa-moon-o"></i>
+</a>    </div>
+    <div class="btn-group change-font" data-toggle="buttons-radio">
+      <a class="btn font " data-font="font1" href="javascript:void(null);">宋体</a>
+      <a class="btn font hei active" data-font="font2" href="javascript:void(null);">黑体</a>
+    </div>
+    <div class="btn-group change-locale" data-toggle="buttons-radio">
+      <a class="btn font active" data-locale="zh-CN" href="javascript:void(null);">简</a>
+      <a class="btn font hei " data-locale="zh-TW" href="javascript:void(null);">繁</a>
+    </div>
+  </div>
+
+    <!-- Javascripts
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://cdn-qn0.jianshu.io/assets/base-ded41764c207f7ff545c28c670922d25.js"></script>
+    
+    <script src="http://cdn-qn0.jianshu.io/assets/reading-base-0028299ec0c770293c0f07e2f338b48f.js"></script>
+      <script src="http://cdn-qn0.jianshu.io/assets/reading/module_sets/home-8a7011753fe744d1ec1a3b7af35d9590.js"></script>
+  
+
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-35169517-1']);
+  _gaq.push(['_setCustomVar', 2, 'User Type', 'Visitor', 1 ]);
+  _gaq.push(['_trackPageview']);
+
+  
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+  </body>
+</html>
