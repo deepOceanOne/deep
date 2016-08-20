@@ -10,8 +10,7 @@ describe('diff',function(){
 		 	var urlA = "www.sina.com.cn";
 			var urlB = "www.163.com";	
 			var diff = require("../proxy/diff.js");
-			var diff_result = diff.from(urlA,urlB);	
-			var fs = require(fs);
+			var diff_result = diff.fromurl(urlA,urlB);	
 						
 		});	
 	});
