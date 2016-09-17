@@ -1,0 +1,6 @@
+# the crontab file
+
+# do things every minute
+# listed as 
+# minute  hour  day month  weekly
+*/1 * * * *  /root/to/task_sh_file   
