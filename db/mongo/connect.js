@@ -3,6 +3,8 @@ var MongoClient = require('mongodb').MongoClient
 var fs = require('fs')
 
 var insertOps = require("./insert.js");
+
+var timedString = require('./timed_string.js');
  
 // Connection URL 
 var url = 'mongodb://localhost:27017/test';
@@ -14,7 +16,7 @@ MongoClient.connect(url, function(err, db) {
 // do insert  operation
 
 // read the documents
-  _read_src("./total.txt",db);
+  _read_src("./new.txt",db);
 
  
 });
@@ -24,28 +26,22 @@ function _read_src(src_path,db){
 	var remaining = ''; 
 	fs.createReadStream(src_path).on('data', function(data) {   	
 	    remaining += data;                                                                                                                         
-	    var index = remaining.indexOf('\n');                                                                                                       
-	    while (index > -1) {                                                                                                                       
-	      line = remaining.substring(0, index);                                                                                                
-	      remaining = remaining.substring(index + 1);          
-	      func(line,db);                                                                                                                              
-	      index = remaining.indexOf('\n');                                                                                                         
-	    }                        	
 	})
 	.on("end",function(){
+		func(remaining,db);
 		console.log("end1");
 		console.log("db operation done");
-		db.close();
+//		db.close();
 	});
 
 }
 
 function func(data,db) {                                                                                                                                                                                                                                 
    console.log("insert one item done"); 
+   var inserttime = timedString.now();
    content = 	{
-		"describ" : data.split(" === ")[0],
-		"title" : data.split(" === ")[1],
-		"detail" : data.split(" === ")[2]
+		"title" :  inserttime,
+		"text" : data 
 	};
   insertOps.insert(db,content,function(){
         db.close();
@@ -56,19 +52,3 @@ function func(data,db) {
 
 
 
-// the insertion  operation
-// dumped
-var insertDocuments = function(db, callback) {
-  // Get the documents collection 
-  var collection = db.collection('documents');
-  // Insert some documents 
-  collection.insertMany([
-    {a : 1}, {a : 2}, {a : 3}
-  ], function(err, result) {
-    assert.equal(err, null);
-    assert.equal(3, result.result.n);
-    assert.equal(3, result.ops.length);
-    console.log("Inserted 3 documents into the document collection");
-    callback(result);
-  });
-}

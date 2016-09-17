@@ -4,12 +4,12 @@ var  assert = require('assert');
 
 insertDocuments = function(db,content, callback) {
   // Get the documents collection 
-  var collection = db.collection('documents');
+  var collection = db.collection('hint');
   // Insert some documents 
   // describ, title, detail
 
   collection.insertMany([
-    {describ : content.describ, title : content.title, detail : content.detail}
+    { title : content.title, text : content.text}
   ], function(err, result) {
     assert.equal(err, null);
     assert.equal(1, result.result.n);
